@@ -1,5 +1,3 @@
-const res = require("express/lib/response");
-
 var memory = "0",
 	currentValue = "0",
 	resultValue = 0;

@@ -31,7 +31,8 @@ h1 {
 	display: flex;
 	align-items: center;
 	justify-content: flex-end;
-	color: white;
+	color: #222f3e;
+	font-size: 20px;
 	font-weight: bold;
 	box-sizing: border-box;
 }
