@@ -3,10 +3,47 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <link rel="stylesheet" href="./styles.css">
-    <title>Vanilla JS Calculator</title>
+    <title>Vanilla JavaScript Calculator</title>
+<link rel="stylesheet" href="./styles.css">
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link href="https://fonts.googleapis.com/css2?family=Plus+Jakarta+Sans:ital,wght@0,200..800;1,200..800&display=swap" rel="stylesheet">
 </head>
 <body>
-    
+    <div class="wrapper">
+        <input type="text" class="display" id="display" disabled>
+        <div class="button-wrapper">
+            
+            
+            <button id="addition-btn" class="operator" onclick="">+</button>
+            <button id="substraction-btn" class="operator" onclick="">-</button>
+            <button id="multiplicaiton-btn" class="operator" onclick="">x</button>
+            <button id="division-btn" class="operator" onclick="">÷</button>
+            
+            <button id="seven-btn" class="number" onclick="">7</button>
+            <button id="eight-btn" class="number" onclick="">8</button>
+            <button id="nine-btn" class="number"  onclick="">9</button>
+            
+            <button id="minusplus-btn" class="operator" onclick="">+-</button>
+            <button id="four-btn" class="number" onclick="">4</button>
+            <button id="five-btn" class="number" onclick="">5</button>
+            <button id="six-btn" class="number" onclick="">6</button>
+            
+            <button id="percentage-btn" class="operator" onclick="">%</button>
+            <button id="one-btn" class="number" onclick="">1</button>
+            <button id="two-btn" class="number" onclick="">2</button>
+            <button id="three-btn" class="number" onclick="">3</button>
+            
+            <button id="decimal-btn" class="operator" onclick="">.</button>
+            
+            
+            <button id="zero-btn" class="number" onclick="">0</button>
+            <button id="clear-btn" class="clear-btn" onclick="">C</button>
+            <button id="equal-btn" class="equal-btn" onclick="">=</button>
+
+        </div>
+    </div>
+
+    <script src="./script.js"></script>
 </body>
 </html>
