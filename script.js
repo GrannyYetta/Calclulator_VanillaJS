@@ -4,7 +4,7 @@ var memory = "0",
 
 const maxChar = 12;
 
-const display = document.querySelector(".display");
+const display = document.querySelector(".display p");
 
 //printing a value on the display
 
