@@ -2,7 +2,7 @@ var memory = "0",
 	currentValue = "0",
 	resultValue = 0;
 
-const maxChar = 12;
+const maxChar = 10;
 
 const display = document.querySelector(".display p");
 
@@ -10,7 +10,7 @@ const display = document.querySelector(".display p");
 
 function addValue(digit) {
 	if (eval(currentValue) === 0 && currentValue.indexOf(".") === -1) {
-		current = digit;
+		currentValue = digit;
 	} else {
 		currentValue += digit;
 	}
@@ -32,14 +32,23 @@ function addDecimal() {
 //inclunding the minusplus function
 
 function minusPlus() {
-	if (currentValue.indexOf("-") === 0) {
-		currentValue = currentValue.substring(1);
-	} else {
-		currentValue = "-" + currentValue;
-	}
-	if (eval(currentValue) === 0 && currentValue.indexOf(".") === -1) {
-		currentValue = 0;
-	}
+	if (currentValue.indexOf("-") !== 0)
+		return (currentValue = "-" + currentValue);
+
+	if (currentValue.indexOf("-") === 0)
+		return (currentValue = currentValue.substring(1));
+
+	if (parseFloat(currentValue) === 0 && currentValue.indexOf(".") === -1)
+		return (currentValue = 0);
+
+	// if (currentValue.indexOf("-") === 0) {
+	// 	currentValue = currentValue.substring(1);
+	// } else {
+	// 	currentValue = "-" + currentValue;
+	// }
+	// if (eval(currentValue) === 0 && currentValue.indexOf(".") === -1) {
+	// 	currentValue = 0;
+	// }
 }
 
 // adding the clear function to C
@@ -97,25 +106,25 @@ function percentage() {
 function calculate() {
 	// if the operator used was the multiplication, then multiply what is stored in memory with the current value
 	if (resultValue === 1) {
-		currentValue = eval(memory) * eval(currentValue);
+		currentValue = parseFloat(memory) * parseFloat(currentValue);
 	}
 
 	// if the operator is the division one, then multiply the value stored in memory with the current value
 	if (resultValue === 2) {
 		if (eval(currentValue) !== 0) {
 			// unless it is trying to divide by zero
-			currentValue = eval(memory) / eval(currentValue);
+			currentValue = parseFloat(memory) / parseFloat(currentValue);
 		} else {
 			currentValue = "Error";
 		}
 	}
 	// if the operation used was addition, then add what is stored in memory with the current value
 	if (resultValue === 3) {
-		currentValue = eval(memory) + eval(currentValue);
+		currentValue = parseFloat(memory) + parseFloat(currentValue);
 	}
 	// if the operation used was subtraction, then subtract what is stored in memory with the current value
 	if (resultValue === 4) {
-		currentValue = eval(memory) - eval(currentValue);
+		currentValue = parseFloat(memory) - parseFloat(currentValue);
 	}
 
 	// reset the value stored in the memory and the current value and force the current value to a string after completing the calculation
